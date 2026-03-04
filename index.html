@@ -2,10 +2,58 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Year-End Adjustment Q&A</title>
+  <title>Year-End Tax Resource</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #answer {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f3f3f3;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Year-End Adjustment Q&A</h2>
-  <p>If you can see this page, GitHub Pages works 🎉</p>
+
+  <h2>Year-End Tax Q&A</h2>
+
+  <p>Ask your question (English / 日本語 / 中文):</p>
+
+  <input type="text" id="question" placeholder="Type your question here..." />
+  <button onclick="answerQuestion()">Submit</button>
+
+  <div id="answer"></div>
+
+  <script>
+    function answerQuestion() {
+      const question = document.getElementById("question").value;
+      const answerBox = document.getElementById("answer");
+
+      if (!question) {
+        answerBox.innerHTML = "Please enter a question.";
+        return;
+      }
+
+      // 暂时模拟回答
+      answerBox.innerHTML = "Thank you for your question. (Next step: connect to n8n)";
+    }
+  </script>
+
 </body>
 </html>
